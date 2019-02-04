@@ -14,9 +14,3 @@ indent_size = 2
 
 [.*rc]
 indent_size = 2
-[{bower,package}.json]
-indent_size = 2
-[webpack.config.js]
-indent_size = 2
-
-

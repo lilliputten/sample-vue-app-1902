@@ -1,8 +1,9 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# Generated content & submodules
-.dev-data
-
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 # Unused & temp files
 \!UNUSED
 ~*
@@ -28,8 +29,10 @@ zia*
 
 # production
 /build
+/dist
 # uncomment if need to deploy archive
 build-pack.zip
+dist-pack.zip
 
 # misc
 .DS_Store
