@@ -9,25 +9,30 @@
 </template>
 
 <script>
-  //import HelloWorld from './components/HelloWorld.vue'
   import ShowTimezone from './components/ShowTimezone.vue'
-
   export default {
     name: 'app',
     components: {
-      // HelloWorld,
       ShowTimezone,
     },
   }
 </script>
 
-<style>
+<style lang="scss">
+  body {
+    background-color: #eee;
+    .md-app:not(.md-overlap).md-theme-default,
+    .md-content.md-theme-default {
+      background-color: rgba(255,255,255,0);
+    }
+    .md-app .md-content.md-theme-default {
+      border: 1px solid transparent;
+    }
+  }
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    padding-top: 50px;
   }
 </style>

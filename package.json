@@ -2,23 +2,6 @@
   "name": "sample-vue-app-1902",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {
-    "npm-run-all": "^4.1.5",
-    "vue": "^2.5.22",
-    "vue-material": "^1.0.0-beta-10.2"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.1.0",
-    "npm-package-user-scripts-list": "^0.1.10",
-    "stylelint": "^9.10.1",
-    "stylelint-scss": "^3.5.2",
-    "vue-template-compiler": "^2.5.21"
-  },
   "eslintConfig": {
     "root": true,
     "env": {
@@ -43,6 +26,26 @@
     "last 2 versions",
     "not ie <= 8"
   ],
+  "dependencies": {
+    "vue": "^2.5.22",
+    "vue-material": "^1.0.0-beta-10.2",
+    "vuelidate": "^0.7.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.1.0",
+    "node-sass": "^4.11.0",
+    "npm-package-user-scripts-list": "^0.1.10",
+    "npm-run-all": "^4.1.5",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.10.1",
+    "stylelint-scss": "^3.5.2",
+    "vue-template-compiler": "^2.5.21"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
