@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "npm-run-all": "^4.1.5",
     "vue": "^2.5.22"
   },
   "devDependencies": {
@@ -11,7 +12,10 @@
     "@vue/cli-service": "^3.4.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vue": "^5.1.0",
+    "npm-package-user-scripts-list": "^0.1.10",
+    "stylelint": "^9.10.1",
+    "stylelint-scss": "^3.5.2",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
@@ -41,7 +45,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "vue-lint": "echo --Vue source code linting-- && vue-cli-service lint && echo No Vue problems found",
+    "stylelint": "echo --Postcss linting-- && stylelint src/**/*.css --syntax scss && echo No postcss problems found",
+    "eslint": "echo --JS source code linting-- && eslint . --ext .js && echo No JS problems found",
+    "lint": "echo --Lint all source code-- && npm-run-all stylelint vue-lint",
+    "jest-SAMPLE": "echo --Run tests-- && jest",
+    "test": "echo --Run all lintings and tests-- && npm-run-all lint",
     "help": "echo --List all available script commands-- && npm-package-user-scripts-list"
   }
 }
