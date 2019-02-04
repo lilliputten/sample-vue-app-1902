@@ -1,0 +1,78 @@
+{
+  "response": {
+    "GeoObjectCollection": {
+      "metaDataProperty": {
+        "GeocoderResponseMetaData": {
+          "request": "moscow",
+          "found": "8",
+          "results": "1",
+          "boundedBy": {
+            "Envelope": {
+              "lowerCorner": "36.282972 55.231529",
+              "upperCorner": "38.864748 56.264747"
+            }
+          }
+        }
+      },
+      "featureMember": [
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "kind": "locality",
+                "text": "Россия, Москва",
+                "precision": "other",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Москва",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Центральный федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Москва"
+                    },
+                    {
+                      "kind": "locality",
+                      "name": "Москва"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Москва",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Москва",
+                      "Locality": {
+                        "LocalityName": "Москва"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Россия",
+            "name": "Москва",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "37.326051 55.491126",
+                "upperCorner": "37.967682 55.957565"
+              }
+            },
+            "Point": {
+              "pos": "37.617635 55.755814"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
