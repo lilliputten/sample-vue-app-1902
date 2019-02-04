@@ -1,0 +1,33 @@
+<!--
+ vim: ft=markdown:
+-->
+
+# sample-vue-app
+
+## Project docs
+
+- `README.md`
+- `TODO.md`
+- `CHANGELOG.md`
+
+## Config files
+
+- `package.json`
+- ~~`gulpfile.js`~~
+- `.bemrc.js`
+- `config-overrides.js`
+- `jest.config.js`
+- `.lvimrc`
+- `tsconfig.json` (set/reset `noUnusedLocals`, `noUnusedParameters` for production/development)
+- `tslint.yaml`
+- `.eslintrc.yml`
+- '.stylelintrc.yml'
+- `src/config/__css/config__css.js`
+- `src/config/__site/config__site.js`
+- `src/config/__pages/config__pages.js`
+- `src/lib/core/ui.js`
+
+## Module extensions
+
+- `*.js,*.jsx,*.ts,*.tsx,*.css,*.styl,*.md,*.json,*.yaml,*.sh`
+
