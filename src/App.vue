@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <md-app>
+      <md-app-content>
+        <ShowTimezone />
+      </md-app-content>
+    </md-app>
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
+  //import HelloWorld from './components/HelloWorld.vue'
+  import ShowTimezone from './components/ShowTimezone.vue'
 
   export default {
     name: 'app',
     components: {
-      HelloWorld,
+      // HelloWorld,
+      ShowTimezone,
     },
   }
 </script>
