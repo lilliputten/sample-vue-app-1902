@@ -18,16 +18,13 @@
 - `config-overrides.js`
 - `jest.config.js`
 - `.lvimrc`
-- `tsconfig.json` (set/reset `noUnusedLocals`, `noUnusedParameters` for production/development)
-- `tslint.yaml`
 - `.eslintrc.yml`
 - '.stylelintrc.yml'
-- `src/config/__css/config__css.js`
-- `src/config/__site/config__site.js`
-- `src/config/__pages/config__pages.js`
-- `src/lib/core/ui.js`
+- `public/index.html`
+ - `src/App.vue`
+ - `src/main.js`
 
 ## Module extensions
 
-- `*.js,*.jsx,*.ts,*.tsx,*.css,*.styl,*.md,*.json,*.yaml,*.sh`
+- `*.vue,*.js,*.jsx,*.ts,*.tsx,*.css,*.styl,*.md,*.json,*.yml,*.yaml,*.sh`
 
