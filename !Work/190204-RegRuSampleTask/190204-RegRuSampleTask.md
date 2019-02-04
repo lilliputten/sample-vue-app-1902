@@ -51,3 +51,12 @@ Moscow:
 - [Yandex API](https://geocode-maps.yandex.ru/1.x/?geocode=moscow&format=json&results=1)
 - [Google API](https://maps.googleapis.com/maps/api/timezone/json?location=55.751244,37.618423&timestamp=1458000000&key=YOUR_API_KEY)
 
+------------
+
+See [API Response Samples](public/api-samples):
+
+- [Google: Moscow](public/api-samples/google-moscow.json)
+- [Google: New York](public/api-samples/google-new%20york.json)
+- [Yandex: Moscow](public/api-samples/yandex-moscow.json)
+- [Yandex: New York](public/api-samples/yandex-new%20york.json)
+
