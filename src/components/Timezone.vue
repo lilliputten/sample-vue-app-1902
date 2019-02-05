@@ -121,7 +121,7 @@
           this.fetchTimezone()
         } else {
           // Show snackbar with error text
-          this.snackbarContent = 'Please select city!'
+          this.snackbarContent = 'The city parameter is required'
           this.showSnackbar = true
         }
       }
@@ -157,7 +157,7 @@
   .source-city-item,
   .timezone-item {
     .md-field {
-      margin-bottom: 0;
+      margin-bottom: 5px;
     }
   }
   .timezone-item {
