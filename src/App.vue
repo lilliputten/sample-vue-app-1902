@@ -34,5 +34,7 @@
   #app {
     text-align: center;
     padding-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
   }
 </style>

@@ -13,7 +13,7 @@
 
           <div class="md-layout md-gutter">
 
-            <div class="md-layout-item md-small-size-100">
+            <div class="md-layout-item source-city-item md-size-100">
               <md-field :class="getValidationClass('city')">
                 <label for="city">City:</label>
                 <md-select name="city" id="city" placeholder="Select source city here..." v-model="form.city" :disabled="sending">
@@ -25,7 +25,7 @@
               </md-field>
             </div>
 
-            <div class="md-layout-item md-small-size-100 timezone-item">
+            <div class="md-layout-item timezone-item md-size-100">
               <md-field>
                 <label for="timezone">City timezone:</label>
                 <md-input name="timezone" id="timezone" placeholder="Target timezone will be displayed here..." v-model="form.timezone" disabled />
@@ -148,20 +148,24 @@
     }
   }
   .md-card-content {
-    padding-bottom: 0;
+    // padding-bottom: 0;
   }
   .md-disabled,
   input[disabled="disabled"] {
     opacity: .5;
   }
+  .source-city-item,
+  .timezone-item {
+    .md-field {
+      margin-bottom: 0;
+    }
+  }
   .timezone-item {
     .md-field.md-disabled {
       opacity: 1;
       &.md-theme-default:after {
-        // display: none;
         background-color: transparent;
       }
-      margin-bottom: 0;
       &.md-has-value {
         .md-input[disabled] {
           cursor: text;
