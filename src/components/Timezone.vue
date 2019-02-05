@@ -63,8 +63,9 @@
     mixins: [validationMixin],
     data: () => ({
       form: {
-        // city: null,
-        city: 'moscow', // DEBUG!
+        city: null,
+        // city: 'moscow', // DEBUG!
+        // city: 'new york', // DEBUG!
         timezone: null,
       },
       showSnackbar: false,
@@ -92,9 +93,9 @@
         this.sending = true
         const { city } = this.form
         try {
-          // Fetch timezone values
-          const { timeZoneId, timeZoneName } = await timezoneLoader.loadTimezone({city})
-          this.form.timezone = `${timeZoneName} (${timeZoneId})`
+          // Fetch timezone parameters
+          const { id, name } = await timezoneLoader.loadTimezone({city})
+          this.form.timezone = `${name} (${id})`
           this.cityFetched = true
         }
         catch(err) {
@@ -150,17 +151,23 @@
     opacity: .5;
   }
   .timezone-item {
-    .md-disabled {
+    .md-field.md-disabled {
       opacity: 1;
-    }
-    input {
-      // opacity: .5;
-    }
-    .md-field {
-      &:after {
-        display: none;
+      &.md-theme-default:after {
+        // display: none;
+        background-color: transparent;
       }
       margin-bottom: 0;
+      &.md-has-value {
+        .md-input[disabled] {
+          cursor: text;
+          label,
+          input {
+            // pointer-events: all;
+            user-select: all;
+          }
+        }
+      }
     }
   }
 </style>

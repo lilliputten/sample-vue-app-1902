@@ -44,7 +44,7 @@ class TimezoneLoader extends DataLoader {
       this.loadJson(url)
         .then((data) => {
           const pos = data?.response?.GeoObjectCollection?.featureMember?.[0]?.GeoObject?.Point?.pos
-          const posList = pos && typeof pos === 'string' && pos.split(' ').map((s) => Number(s))
+          const posList = pos && typeof pos === 'string' && pos.trim().split(' ').map((s) => Number(s))
           if (!Array.isArray(posList) || posList.length !== 2) {
             const errMsg = 'TimezoneLoader:getCoords invalid coordinates (Yandex API) data returned'
             const err = this.getErrorText(errMsg, data)
@@ -71,7 +71,7 @@ class TimezoneLoader extends DataLoader {
    * @param {number} props.lat
    * @param {number} props.lon
    * @param {number} [props.timestamp=Date.now()]
-   * @return {Promise<{ timeZoneId: string, timeZoneName: string }>}
+   * @return {Promise<{ id: string, name: string }>}
    */
   getTimezone(props) {
 
@@ -101,7 +101,7 @@ class TimezoneLoader extends DataLoader {
             // Success!
             // eslint-disable-next-line no-unused-vars
             const { timeZoneId, timeZoneName } = data
-            const timezoneData = { timeZoneId, timeZoneName }
+            const timezoneData = { id: timeZoneId.trim(), name: timeZoneName.trim() }
             return resolve(timezoneData)
           }
         })
