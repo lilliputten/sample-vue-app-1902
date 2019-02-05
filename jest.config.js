@@ -7,7 +7,8 @@ module.exports = {
   // },
   transform : {
     // '^.+\\.(ts|tsx)$' : 'ts-jest',
-    '^.+\\.vue$': 'vue-jest'
+    '^.+\\.vue$': 'vue-jest',
+    '^.+\\.js$': 'babel-jest',
   },
   testMatch : [
       '**/src/**/*.test.+(js|vue)',
@@ -17,7 +18,9 @@ module.exports = {
     '\\.(css|less|svg)$': '<rootDir>/__mocks__/style.js'
   },
   // testEnvironment: '<rootDir>/__mocks__/customizedJsdomEnv.js',
-  setupFiles: [ '<rootDir>/__mocks__/setup.js' ],
+  setupFiles: [
+    // '<rootDir>/__mocks__/setup.js',
+  ],
   modulePaths : [
     '<rootDir>/src',
   ],
