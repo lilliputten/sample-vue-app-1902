@@ -45,8 +45,17 @@ New York:
 
 Moscow:
 
+```json
+{
+  "lowerCorner": "36.282972 55.231529",
+  "upperCorner": "38.864748 56.264747"
+}
+```
 - 55.7558° N, 37.6173° E
 - 55.751244, 37.618423
+
+- Latitude: 55.751244
+- Longitude: 37.618423
 
 - [Yandex API](https://geocode-maps.yandex.ru/1.x/?geocode=moscow&format=json&results=1)
 - [Google API](https://maps.googleapis.com/maps/api/timezone/json?location=55.751244,37.618423&timestamp=1458000000&key=YOUR_API_KEY)
