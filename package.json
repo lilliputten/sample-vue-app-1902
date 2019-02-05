@@ -50,8 +50,10 @@
     "vue-template-compiler": "^2.5.21"
   },
   "scripts": {
+    "postinstall-publish-dir": "echo --Install publish submodule-- && ( test ! -d .publish || git rm -rf .publish ) && git submodule add -f git@github.com:lilliputten/sample-vue-app-1902-build.git .publish",
+    "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-publish-dir",
     "server": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest build",
     "vue-lint": "echo --Vue source code linting-- && vue-cli-service lint && echo No Vue problems found",
     "stylelint": "echo --Postcss linting-- && stylelint src/**/*.css --syntax scss && echo No postcss problems found",
     "eslint": "echo --JS source code linting-- && eslint . --ext .js && echo No JS problems found",
