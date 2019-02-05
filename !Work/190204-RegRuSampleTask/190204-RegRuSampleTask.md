@@ -28,9 +28,9 @@ New York:
 
 ```json
 {
-            "Point": {
-              "pos": "-74.002881 40.71598"
-            }
+  "Point": {
+    "pos": "-74.002881 40.71598"
+  }
 }
 ```
 - [Yandex API Url](https://geocode-maps.yandex.ru/1.x/?geocode=new%20york&format=json&results=1)
@@ -40,9 +40,9 @@ Moscow:
 
 ```json
 {
-            "Point": {
-              "pos": "37.617635 55.755814"
-            }
+  "Point": {
+    "pos": "37.617635 55.755814"
+  }
 }
 ```
 - [Yandex API Url](https://geocode-maps.yandex.ru/1.x/?geocode=moscow&format=json&results=1)
