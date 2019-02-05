@@ -9,6 +9,11 @@ const siteConfig = {
   // GOOGLE_API_KEY,
   // USE_STUB_URLS,
 
+  stubCities: [
+    'Moscow',
+    'New York',
+  ],
+
   getCoordsRealUrl: ({city}) => `https://geocode-maps.yandex.ru/1.x/?geocode=${city}&format=json&results=1`,
   getCoordsStubUrl: ({city}) => `/api-samples/yandex-${city}.json`,
 

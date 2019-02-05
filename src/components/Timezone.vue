@@ -17,8 +17,9 @@
               <md-field :class="getValidationClass('city')">
                 <label for="city">City:</label>
                 <md-select name="city" id="city" placeholder="Select source city here..." v-model="form.city" :disabled="sending">
-                  <md-option value="moscow">Moscow</md-option>
-                  <md-option value="new york">New York</md-option>
+                  <md-option v-for="city in stubCities" v-bind:key="city" v-bind:value="city.toLowerCase()">
+                    {{ city }}
+                  </md-option>
                 </md-select>
                 <span class="md-error">The city is required</span>
               </md-field>
@@ -56,16 +57,19 @@
   /* eslint-disable no-debugger, no-console */
   import { validationMixin } from 'vuelidate'
   import { required } from 'vuelidate/lib/validators'
+  import { site as siteConfig } from '../config'
   import TimezoneLoader from '../lib/TimezoneLoader'
+  const { stubCities } = siteConfig
   const timezoneLoader = new TimezoneLoader()
+  // const defaultCity = null
+  const defaultCity = 'new york' // DEBUG
   export default {
     name: 'ShowTimezone',
     mixins: [validationMixin],
     data: () => ({
+      stubCities,
       form: {
-        city: null,
-        // city: 'moscow', // DEBUG!
-        // city: 'new york', // DEBUG!
+        city: defaultCity,
         timezone: null,
       },
       showSnackbar: false,
