@@ -28,37 +28,25 @@ New York:
 
 ```json
 {
-  "lowerCorner": "-74.140359 40.587148",
-  "upperCorner": "-73.873200 40.840713"
+            "Point": {
+              "pos": "-74.002881 40.71598"
+            }
 }
 ```
-- Coords: 40.7128° N, 74.0060° W
-- Coords Raw: 40.712800, -74.006000
-- Median Lon: (40.587148 + 40.840713) / 2 = 40.71393050
-- Median Lat: (74.140359 + 73.873200) / 2 = -74.00677950
-- Median Lon, Lat: 40.71393050, -74.00677950
-- Median Coords: 40.7139° N, 74.0068° W
-- Median Coords: 40°42'50.0"N 74°00'24.5"W
-
-- [Yandex API](https://geocode-maps.yandex.ru/1.x/?geocode=new%20york&format=json&results=1)
-- [Google API](https://maps.googleapis.com/maps/api/timezone/json?location=40.71393050,-74.00677950&timestamp=1458000000&key=YOUR_API_KEY)
+- [Yandex API Url](https://geocode-maps.yandex.ru/1.x/?geocode=new%20york&format=json&results=1)
+- [Google API Url](https://maps.googleapis.com/maps/api/timezone/json?location=40.71393050,-74.00677950&timestamp=1458000000&key=YOUR_API_KEY)
 
 Moscow:
 
 ```json
 {
-  "lowerCorner": "36.282972 55.231529",
-  "upperCorner": "38.864748 56.264747"
+            "Point": {
+              "pos": "37.617635 55.755814"
+            }
 }
 ```
-- 55.7558° N, 37.6173° E
-- 55.751244, 37.618423
-
-- Latitude: 55.751244
-- Longitude: 37.618423
-
-- [Yandex API](https://geocode-maps.yandex.ru/1.x/?geocode=moscow&format=json&results=1)
-- [Google API](https://maps.googleapis.com/maps/api/timezone/json?location=55.751244,37.618423&timestamp=1458000000&key=YOUR_API_KEY)
+- [Yandex API Url](https://geocode-maps.yandex.ru/1.x/?geocode=moscow&format=json&results=1)
+- [Google API Url](https://maps.googleapis.com/maps/api/timezone/json?location=55.751244,37.618423&timestamp=1458000000&key=YOUR_API_KEY)
 
 ------------
 
