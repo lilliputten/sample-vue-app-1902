@@ -5,6 +5,20 @@ import { site as siteConfig } from '../config'
 
 class TimezoneLoader extends DataLoader {
 
+  /** constructor ** {{{
+   * @param {object} props
+   * @param {boolean} [props.useRealUrls=false]
+   */
+  constructor({ useRealUrls } = {}) {
+
+    super()
+
+    // Make actual urls depending on the `useRealUrls` value...
+    this.coordsUrl = useRealUrls ? siteConfig.coordsRealUrl : siteConfig.coordsStubUrl
+    this.timezoneUrl = useRealUrls ? siteConfig.timezoneRealUrl : siteConfig.timezoneStubUrl
+
+  }/*}}}*/
+
   /** getErrorText ** {{{
    * @param {string} msg
    * @param {*} err
@@ -36,7 +50,7 @@ class TimezoneLoader extends DataLoader {
 
     return new Promise((resolve, reject) => {
 
-      let url = siteConfig.getCoordsUrl
+      let url = this.coordsUrl
       if (typeof url === 'function') {
         url = url(props)
       }
@@ -83,7 +97,7 @@ class TimezoneLoader extends DataLoader {
         props = Object.assign({ timestamp }, props)
       }
 
-      let url = siteConfig.getTimezoneUrl
+      let url = this.timezoneUrl
       if (typeof url === 'function') {
         url = url(props)
       }
