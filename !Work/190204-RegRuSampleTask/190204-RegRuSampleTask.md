@@ -62,7 +62,7 @@ Moscow:
 
 ------------
 
-See [API Response Samples](public/api-samples):
+See [API Response Samples](../../public/api-samples):
 
 - [Google: Moscow](../../public/api-samples/google-moscow.json)
 - [Google: New York](../../public/api-samples/google-new%20york.json)
