@@ -50,16 +50,18 @@
     "vue-template-compiler": "^2.5.21"
   },
   "scripts": {
-    "postinstall-publish-dir": "echo --Install publish submodule-- && ( test ! -d .publish || git rm -rf .publish ) && git submodule add -f git@github.com:lilliputten/sample-vue-app-1902-build.git .publish",
-    "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-publish-dir",
-    "server": "vue-cli-service serve",
-    "build": "vue-cli-service build --dest build",
+    "add-publish-submodule": "echo --Install publish submodule-- && ( test ! -d .publish || git rm -rf .publish ) && git submodule add -f git@github.com:lilliputten/sample-vue-app-1902-build.git .publish",
+    "postinstall": "echo --Run postinstall tasks-- && npm-run-all add-publish-submodule",
+    "server": "echo --Start developer server-- && vue-cli-service serve",
     "vue-lint": "echo --Vue source code linting-- && vue-cli-service lint && echo No Vue problems found",
     "stylelint": "echo --Postcss linting-- && stylelint src/**/*.css --syntax scss && echo No postcss problems found",
     "eslint": "echo --JS source code linting-- && eslint . --ext .js && echo No JS problems found",
     "lint": "echo --Lint all source code-- && npm-run-all stylelint vue-lint",
-    "jest-SAMPLE": "echo --Run tests-- && jest",
+    "jest-SAMPLE": "echo --Run tests (TODO)-- && jest",
     "test": "echo --Run all lintings and tests-- && npm-run-all lint",
+    "build": "echo --Make production build-- && vue-cli-service build --dest build",
+    "publish": "echo --Publish build to demo-server-- && cd .publish && git pull && rm -Rf * && cp -Rfu ../*.md ../build/* . && git add . -Av && git commit -am \"auto-commit\" && git push && cd ..",
+    "launcher": "npm-launcher",
     "help": "echo --List all available script commands-- && npm-package-user-scripts-list"
   }
 }
