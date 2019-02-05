@@ -1,4 +1,3 @@
-
 <!--{{{ Templates... -->
 <template>
   <div class="ShowTimezone">
@@ -61,15 +60,16 @@
   import TimezoneLoader from '../lib/TimezoneLoader'
   const { stubCities } = siteConfig
   const timezoneLoader = new TimezoneLoader()
-  // const defaultCity = null
-  const defaultCity = 'new york' // DEBUG
+  const defaultCityId = null
+  // DEBUG: Autoselect first city in list?
+  // const defaultCityId = stubCities[0].toLowerCase()
   export default {
     name: 'ShowTimezone',
     mixins: [validationMixin],
     data: () => ({
       stubCities,
       form: {
-        city: defaultCity,
+        city: defaultCityId,
         timezone: null,
       },
       showSnackbar: false,
