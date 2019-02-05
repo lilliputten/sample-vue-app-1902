@@ -58,11 +58,12 @@
   import { required } from 'vuelidate/lib/validators'
   import { site as siteConfig } from '../config'
   import TimezoneLoader from '../lib/TimezoneLoader'
-  const { stubCities } = siteConfig
-  const timezoneLoader = new TimezoneLoader()
+  // Configuration params...
+  const { useRealUrls, stubCities } = siteConfig
+  const timezoneLoader = new TimezoneLoader({useRealUrls})
   const defaultCityId = null
   // DEBUG: Autoselect first city in list?
-  // const defaultCityId = stubCities[0].toLowerCase()
+  // const defaultCityId = stubCities?.[0]?.toLowerCase()
   export default {
     name: 'ShowTimezone',
     mixins: [validationMixin],
