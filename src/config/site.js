@@ -9,6 +9,7 @@ const siteConfig = {
   // GOOGLE_API_KEY,
   // USE_STUB_URLS,
 
+  // Demo cities for corresponding data (see stub request urls below)
   stubCities: [
     'Moscow',
     'New York',
@@ -23,9 +24,8 @@ const siteConfig = {
 
 }
 
-// Make urls depends on USE_STUB_URLS value...
+// Make actual urls depending on the `USE_STUB_URLS` value...
 siteConfig.getCoordsUrl = USE_STUB_URLS ? siteConfig.getCoordsStubUrl : siteConfig.getCoordsRealUrl
 siteConfig.getTimezoneUrl = USE_STUB_URLS ? siteConfig.getTimezoneStubUrl : siteConfig.getTimezoneRealUrl
 
 export default siteConfig
-
