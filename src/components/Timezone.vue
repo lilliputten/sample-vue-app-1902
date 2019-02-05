@@ -42,7 +42,7 @@
         </md-card-actions>
 
       </md-card>
-      <md-snackbar :md-duration=5000 :md-active.sync="showSnackbar" md-persistent>
+      <md-snackbar :md-duration=10000 :md-active.sync="showSnackbar" md-persistent>
         <span v-html="snackbarContent" />
         <md-button class="md-accent" @click="showSnackbar = false">Dismiss</md-button>
       </md-snackbar>
@@ -56,19 +56,21 @@
   /* eslint-disable no-debugger, no-console */
   import { validationMixin } from 'vuelidate'
   import { required } from 'vuelidate/lib/validators'
+  import TimezoneLoader from '../lib/TimezoneLoader'
+  const timezoneLoader = new TimezoneLoader()
   export default {
     name: 'ShowTimezone',
     mixins: [validationMixin],
     data: () => ({
       form: {
-        city: null,
+        // city: null,
+        city: 'moscow', // DEBUG!
         timezone: null,
       },
       showSnackbar: false,
       snackbarContent: null,
       cityFetched: false,
       sending: false,
-      timezone: null,
     }),
     validations: {
       form: {
@@ -86,14 +88,26 @@
           }
         }
       },
-      fetchTimezone () {
+      async fetchTimezone () {
         this.sending = true
-        // Instead of this timeout, here you can call your API
-        window.setTimeout(() => {
-          this.form.timezone = `--${this.form.city}--`
+        const { city } = this.form
+        try {
+          // Fetch timezone values
+          const { timeZoneId, timeZoneName } = await timezoneLoader.loadTimezone({city})
+          this.form.timezone = `${timeZoneName} (${timeZoneId})`
           this.cityFetched = true
+        }
+        catch(err) {
+          // eslint-disable-next-line no-console
+          console.error(err)
+          debugger; // eslint-disable-line no-debugger
+          this.snackbarContent = err
+          this.showSnackbar = true
+          this.cityFetched = false
+        }
+        finally {
           this.sending = false
-        }, 1500)
+        }
       },
       submitForm () {
         this.$v.$touch()
@@ -103,7 +117,7 @@
         } else {
           // Show snackbar with error text
           this.snackbarContent = 'Please select city!'
-          this.showSnackbar = true;
+          this.showSnackbar = true
         }
       }
     },
@@ -119,6 +133,14 @@
     top: 0;
     right: 0;
     left: 0;
+  }
+  .md-snackbar-content {
+    span {
+      flex: 1;
+    }
+    button {
+      flex-shrink: 0;
+    }
   }
   .md-card-content {
     padding-bottom: 0;
@@ -140,12 +162,6 @@
       }
       margin-bottom: 0;
     }
-  }
-</style>
-<!-- Global form styles -->
-<style lang="scss">
-  .md-select-menu {
-    background-color: #fff;
   }
 </style>
 <!--}}}-->

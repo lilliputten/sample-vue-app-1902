@@ -2,7 +2,7 @@
 
 const GOOGLE_API_KEY = '--UNDEFINED--'
 
-const USE_STUB_URLS = false
+const USE_STUB_URLS = true
 
 const siteConfig = {
 
