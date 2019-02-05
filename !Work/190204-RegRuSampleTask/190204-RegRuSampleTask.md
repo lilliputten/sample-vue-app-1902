@@ -64,8 +64,8 @@ Moscow:
 
 See [API Response Samples](public/api-samples):
 
-- [Google: Moscow](public/api-samples/google-moscow.json)
-- [Google: New York](public/api-samples/google-new%20york.json)
-- [Yandex: Moscow](public/api-samples/yandex-moscow.json)
-- [Yandex: New York](public/api-samples/yandex-new%20york.json)
+- [Google: Moscow](../../public/api-samples/google-moscow.json)
+- [Google: New York](../../public/api-samples/google-new%20york.json)
+- [Yandex: Moscow](../../public/api-samples/yandex-moscow.json)
+- [Yandex: New York](../../public/api-samples/yandex-new%20york.json)
 

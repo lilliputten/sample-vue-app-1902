@@ -9,7 +9,8 @@ const siteConfig = {
   // GOOGLE_API_KEY,
   useRealUrls,
 
-  // Demo cities for corresponding data (see stub request urls below)
+  // Demo cities for corresponding data (see stub request urls below
+  // and sample data files in `/public/api-samples` folder).
   stubCities: [
     'Moscow',
     'New York',

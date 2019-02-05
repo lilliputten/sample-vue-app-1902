@@ -1,5 +1,6 @@
 {
   "name": "sample-vue-app-1902",
+  "demoServer": "http://sample-vue-app-1902.lilliputten.ru/",
   "version": "0.0.1",
   "private": true,
   "author": "lilliputten <lilliputten@yandex.ru>",
